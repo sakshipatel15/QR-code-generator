@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGFyayUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D)no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.qrcontainer{
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #046b71, #0a9396, #94d2bd) 1;
+    backdrop-filter: blur(20px);
+    padding: 20px 50px;
+    /* border: 2px solid rgba(0,0,0,.2); */
+    h1{
+        font-size: 1.5rem;
+        color: #048f97;
+        span{
+            color: #fff;
+        }
+    }
+}
+input{
+    border: none;
+    outline: none;
+    height: 40px;
+    padding-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: 0.2px solid #ddd;
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 10px 15px 10px rgba(0,0,0,.6);
+    color: #fff;
+}
+input::placeholder{
+    color: #fff;
+}
+button{
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    padding-block: 10px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 0.2px solid #ddd;
+    box-shadow: 10px 15px 10px rgba(0,0,0,.1);
+    background: linear-gradient(135deg, #046b71, #0a9396, #94d2bd);
+}
+button:hover{
+    background: linear-gradient(-135deg, #046b71, #0a9396, #94d2bd);
+    width: 95%;
+    padding-inline:20px ;
+}
+#qrbox{
+  
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    background-color: #046b71;
+    border-radius: 10px;
+    transition: max-height 1s;
+    img{
+        padding: 20px;
+    }
+}
+#qrbox.showimg{
+    max-height: 300px;
+    border: 2px solid rgba(0,0,0,.2);
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+.error2{
+    animation: shake2 0.1s linear 10;
+}
+@keyframes shake {
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+@keyframes shake2 {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+    
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
